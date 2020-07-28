@@ -1,0 +1,56 @@
+.container {
+    -webkit-user-select: none;
+    position: absolute;
+    width: 850px;
+    height: 350px; 
+    left: 59px;
+    top: 132px;
+    background-color: #121212;
+    border-radius: 29px;
+}
+
+.paragraph {
+	position: absolute;
+	left: 35px;
+	top: 0px;
+	font-family: Poiret One;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 44px;
+	color: #FFFFFF;
+}
+
+#back-btn {
+  position: absolute;
+  width: 200px;
+  height: 60px;
+  left: 30px;
+  top: 385px;
+  font-family: 'Poiret One';
+  font-size: 24px;
+  text-align: center;
+  background: #1DB954;
+  border: #1DB954;
+  color: #FFFFFF;
+  cursor: pointer;
+  border-radius: 50px;
+  outline: none;
+}
+
+#agree-btn {
+  position: absolute;
+  width: 200px;
+  height: 60px;
+  left: 250px;
+  top: 385px;
+  font-family: 'Poiret One';
+  font-size: 24px;
+  text-align: center;
+  background: #1DB954;
+  border: #1DB954;
+  color: #FFFFFF;
+  cursor: pointer;
+  border-radius: 50px;
+  outline: none;
+}

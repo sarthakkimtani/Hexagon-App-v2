@@ -1,0 +1,51 @@
+.container {
+    -webkit-user-select: none;
+    position: absolute;
+    width: 650px;
+    height: 400px; 
+    left: 155px;
+    top: 50px;
+    background-color: #121212;
+    border-radius: 29px;
+}
+
+.heading {
+    -webkit-user-select: none;
+    position: absolute;
+    width: 400px;
+    height: 146px;
+    left: 50px;
+    bottom: 150px;
+    font-family: 'Poiret One';
+    color: #FFFFFF;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 80px;
+    line-height: 152px;
+}
+
+.sub-heading {
+  -webkit-user-select: none;
+  position: absolute;
+  width: 520px;
+  height: 60px;
+  left: 53px;
+  top: 155px;
+  font-family: 'Poiret One';
+  color: #FFFFFF;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 25px;
+  line-height: 49px;
+
+
+}
+
+.logo {
+  position: absolute;
+  width: 240px;
+  height: 240px;
+  left: 57%;
+  right: 4%;
+  bottom: 41%;
+}

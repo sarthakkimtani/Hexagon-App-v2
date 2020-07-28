@@ -1,0 +1,19 @@
+#heading {
+	-webkit-user-select: none;
+	position: absolute;
+	width: 140px;
+	height: 94px;
+	left: 126px;
+	top: -26px;
+
+	font-family: Poiret One;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 49px;
+	line-height: 94px;
+}
+
+#logo {
+	position: absolute;
+	left: 15px;
+}
