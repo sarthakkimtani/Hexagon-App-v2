@@ -19,7 +19,10 @@ function createWindow() {
 	  maxWidth: 980,
 	  maxHeight: 695,
 	  maximizable: false,	
-  	title: "Hexagon - A Wallpaper App"
+  	title: "Hexagon - A Wallpaper App",
+    webPreferences: {
+      nodeIntegration: "true"
+    }
   });
   mainWindow.loadURL(isDev ? 'http://localhost:3000' : `file://${path.join(__dirname, '../build/index.html')}`);
   mainWindow.on('closed', () => mainWindow = null);

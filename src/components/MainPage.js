@@ -1,5 +1,6 @@
 import React from "react";
 import { unsplash } from "../api/unsplash";
+import Gallery from "./Gallery"
 import { toJson } from "unsplash-js";
 
 
@@ -8,16 +9,12 @@ class MainPage extends React.Component {
 	constructor(props) {
 		super(props)
 	}
-	componentDidMount() {
-		unsplash.currentUser.profile()
-		.then(toJson)
-		.then(json => {
-			console.log(json)
-		})
-	}
+	
 	render() {
 		return(
-			<div>Hello!</div> 
+			<div>
+			  <Gallery />
+			</div> 
 			);
 	}
 }
