@@ -1,7 +1,9 @@
 import React from "react";
+import { unsplash } from "../api/unsplash";
+import { toJson } from "unsplash-js";
 import "./Gallery.css"
 
-class Gallery extends React.Compnent {
+class Gallery extends React.Component {
 	// eslint-disable-next-line
 	constructor(props) {
 		super(props)
@@ -15,7 +17,9 @@ class Gallery extends React.Compnent {
 	}
 	render() {
 		return(
-			<div>Gallery</div>
+			<div class="container">
+			  <h3 id="heading">Wallpapers</h3>
+			</div>
 			);
 	}
 }
