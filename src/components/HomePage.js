@@ -18,7 +18,7 @@ class HomePage extends React.Component {
         	<div style={{'visibility':'true'}} id="main">
            	  <Card />
 		      <Wave className="wave" />
-				<button type="button" className="button">
+				<button type="button" className="button" style={{ 'outline': 'none'}}>
                   <Link to="/agree" style={{ 'textDecoration': 'none', 'color': 'white' }}>
 		              Get Started
 		          </Link>

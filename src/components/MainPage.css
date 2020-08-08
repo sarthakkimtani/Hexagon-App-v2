@@ -1,0 +1,49 @@
+#search {
+	position: absolute;
+	width: 250px;
+	height: 45px;
+	left: 695px;
+	top: 55px;
+	background: #121212;
+	border-radius: 38px;
+	color: #FFFFFF;
+	border: transparent;
+	font-size: 20px;
+	outline: none;
+	font-family: Poiret One;
+	font-style: normal;
+	font-weight: normal;
+	text-align: center;
+}
+
+::placeholder {
+	font-family: Poiret One;
+	font-style: normal;
+	font-weight: normal;
+	text-align: center;
+	font-size: 23px;
+	color: #FFFFFF;
+	opacity: 0.6;
+}
+
+#sunny-chip {
+	position: absolute;
+	left: 0px;
+}
+
+#beach-chip {
+	position: absolute;
+	left: 135px;
+}
+
+#travel-chip {
+	position: absolute;
+	left: 0px;
+	top: 100px;
+}
+
+#night-chip {
+	position: absolute;
+	top: 100px;
+	left: 135px;
+}
