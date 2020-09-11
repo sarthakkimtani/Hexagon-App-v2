@@ -1,4 +1,5 @@
 import React from "react";
+import {ReactComponent as Empty } from "../assets/svg/empty.svg";
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
@@ -19,7 +20,12 @@ class ErrorBoundary extends React.Component {
   render() {
     if (this.state.hasError) {
       // You can render any custom fallback UI
-      return <h1>Something went wrong.</h1>;
+      return (
+        <div>
+          <h1 style={{ "textAlign": "center" }}>Something went wrong.</h1>
+          <Empty style={{"position":"absolute","left":"180px","top":"120px","width":"600px", "height": "400px" }} />
+        </div>
+        );
     }
 
     return this.props.children; 

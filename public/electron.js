@@ -1,6 +1,6 @@
 // Modules to control application life and create native browser window
 const electron = require('electron');
-const { app, BrowserWindow } = require('electron');
+const { app, BrowserWindow, Menu } = require('electron');
 
 const path = require('path');
 const url = require('url');
@@ -9,6 +9,7 @@ const isDev = require('electron-is-dev');
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow;
+let mainMenu = Menu.buildFromTemplate(require('./mainMenu.js'));
 
 function createWindow() {
   mainWindow = new BrowserWindow({
@@ -31,7 +32,10 @@ function createWindow() {
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
-app.on('ready', createWindow);
+app.on('ready', () => {
+  Menu.setApplicationMenu(mainMenu);
+  createWindow()
+});
 
 app.on('window-all-closed', () => {
   // On macOS it's common to re-create a window in the app when the

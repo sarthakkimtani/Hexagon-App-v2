@@ -8,3 +8,18 @@ html {
    color: white;
    font-family: "Poiret One", cursive;
   }
+
+  ::-webkit-scrollbar {
+  	width: 10px;
+  	background: #040404;
+  }
+
+  ::-webkit-scrollbar-track {
+  	border: solid 7px #040404;
+  	border-radius: 30px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+  	background: #121212;
+  	border-radius: 30px;
+  }

@@ -10,8 +10,36 @@ class MainPage extends React.Component {
 	// eslint-disable-next-line
 	constructor(props) {
 		super(props)
-		this.state = { term: "" }
+		this.state = { term: "", images: [] } 
 		this.formSubmit = this.formSubmit.bind(this)
+	}
+	
+	renderImages() {
+		if(this.state.term === "") {
+			unsplash.collections.getCollectionPhotos(1199299,1,10,"popular")
+			.then(toJson)
+			.then(json => {
+				 this.setState({ images: json });
+			});
+			
+			var imgs = this.state.images.map(image => {
+				return(
+					<div key={image.id}>
+					<img src={image.urls.small} alt={image.description} />
+					</div>
+				);
+			})
+		}
+		else {
+			var imgs = this.state.images.map(image => {
+					return(
+					<div key={image.id}>
+					  <img src={image.urls.small} alt={image.description} />
+					</div>
+					);
+				});
+		}
+		return imgs
 	}
 
 	formSubmit(e) {
@@ -19,7 +47,7 @@ class MainPage extends React.Component {
 		unsplash.search.photos(this.state.term,1)
 		.then(toJson)
 		.then(json => {
-			console.log(json.results);
+			this.setState({ images: json.results });
 		});
 	}
 	
@@ -44,6 +72,9 @@ class MainPage extends React.Component {
 			  <div id="night-chip">
 			  	<Chip name="Night" />
 			  </div> 
+			  <Grid>
+				{this.renderImages()}
+			  </Grid>
 			</div> 
 			);
 	}
