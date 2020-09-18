@@ -47,3 +47,22 @@
 	top: 100px;
 	left: 135px;
 }
+
+.download-btn {
+    width: 60px;
+  	height: 32px;
+  	font-family: 'Poiret One';
+  	font-size: 15px;
+  	text-align: center;
+  	background: #1DB954;
+  	border: #1DB954;
+  	color: #FFFFFF;
+  	cursor: pointer;
+  	border-radius: 50px;
+  	outline: none;
+}
+
+.download {
+	width: 18px;
+	height: 18px;
+}

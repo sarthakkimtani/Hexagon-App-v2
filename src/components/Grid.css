@@ -8,6 +8,7 @@
     grid-row-gap: 15px;
     grid-column-gap: 0px;
  	grid-auto-columns: 10px;
+ 	overflow: hidden;
 } 
 
 #grid img {
@@ -15,5 +16,10 @@
 	width: 275px;
 	height: 275px;
 	object-fit: cover;
+	transition: opacity 300ms;
 }
 
+img:hover {
+	cursor: pointer;
+	opacity: 0.6;
+}

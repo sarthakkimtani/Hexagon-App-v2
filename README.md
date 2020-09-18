@@ -1,1 +1,1 @@
-# Hexagon-App-v2
+# Hexagon
