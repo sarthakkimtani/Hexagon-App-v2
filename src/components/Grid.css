@@ -12,6 +12,7 @@
 } 
 
 #grid img {
+	position: relative;
 	-webkit-user-select: none;
 	width: 275px;
 	height: 275px;

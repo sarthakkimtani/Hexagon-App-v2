@@ -27,8 +27,7 @@ const template = [
       { role: 'toggledevtools' },
       { role: 'zoomin' },
       { role: 'zoomout' },
-      { type: 'separator' },
-      { role: 'togglefullscreen' }
+      { type: 'separator' }
     ]
   },
   {

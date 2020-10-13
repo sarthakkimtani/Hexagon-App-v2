@@ -1,18 +1,40 @@
 import React from "react";
 import { unsplash } from "../api/unsplash";
 import { toJson } from "unsplash-js";
+import axios from "axios";
 import Gallery from "./Gallery";
+import Chip from "./Chip";
 import Grid from "./Grid";
 import "./MainPage.css";
-import Chip from "./Chip";
-import {ReactComponent as Download} from "../assets/svg/download.svg";
-import http from "http";
+import { ReactComponent as Download } from "../assets/svg/download.svg";
 
 class MainPage extends React.Component {
 	constructor(props) {
 		super(props)
 		this.state = { term: "", images: [] } 
-		this.formSubmit = this.formSubmit.bind(this)
+		this.formSubmit = this.formSubmit.bind(this);
+	}
+
+	downloadImg(id) {
+		unsplash.photos.getPhoto(id)
+		.then(toJson)
+		.then(json => {
+			const proxyUrl = "https://cors-anywhere.herokuapp.com/";
+			axios({
+				method: 'GET',
+				url: proxyUrl + json.links.download,
+				responseType: 'blob'
+			})
+			.then(res => {
+				console.log(res)
+				const url = window.URL.createObjectURL(new Blob([res.data]));
+  				const link = document.createElement('a');
+  				link.href = url;
+  				link.setAttribute('download', 'image.jpg');
+  				document.body.appendChild(link);
+  				link.click();
+			});
+		});
 	}
 
 	renderImages() {
@@ -26,10 +48,10 @@ class MainPage extends React.Component {
 			var imgs = this.state.images.map(image => {
 				return(
 					<div key={image.id}>
-					<img src={image.urls.small} alt={image.description} onClick={this.onImgClick} />
-					<button type="button" className="download-btn">
-					  <Download className="download"/>
-					</button>
+					<img src={image.urls.small} alt={image.description} />
+					  <a className="download-btn" onClick={ () => { this.downloadImg(image.id) } }>
+					    <Download className="download"/>
+					  </a>
 					</div>
 				);
 			})
@@ -39,9 +61,9 @@ class MainPage extends React.Component {
 					return(
 					<div key={image.id}>
 					  <img src={image.urls.small} alt={image.description} />
-					  <button type="button" class="download-btn">
-					  	<Download className="download" />
-					  </button>
+					    <a className="download-btn" onClick={ () => { this.downloadImg(image.id) } }>
+					  	  <Download className="download" />
+					    </a>
 					</div>
 					);
 				});
@@ -57,28 +79,29 @@ class MainPage extends React.Component {
 			this.setState({ images: json.results });
 		});
 	}
-	
+
 	render() {
+		const input = document.getElementById("search")
 		return(
 			<div>
 			  <form onSubmit={this.formSubmit}>
 			    <input type="text" placeholder="Search" id="search" autoComplete="true" onChange={e => {
 			    	this.setState({term: e.target.value})
 			    }} />
-			  </form>
-			  <Gallery />
-			  <div id="sunny-chip">
-			    <Chip name="Sunny" />
-			  </div> 
-			  <div id="beach-chip">
-			  	<Chip name="Beach" />
-			  </div> 
-			  <div id="travel-chip">
-			  	<Chip name="Travel" />
-			  </div> 
-			  <div id="night-chip">
-			  	<Chip name="Night" />
-			  </div> 
+			    <Gallery />
+			    <div id="sunny-chip" >
+			      <Chip name="Sunny" />
+			    </div> 
+			    <div id="beach-chip">
+			  	  <Chip name="Beach" />
+			  	</div> 
+			  	<div id="travel-chip">
+			  	  <Chip name="Travel" />
+			  	</div> 
+			  	<div id="night-chip">
+			  	  <Chip name="Night" />
+			  	</div>
+			  </form> 
 			  <Grid>
 				{this.renderImages()}
 			  </Grid>

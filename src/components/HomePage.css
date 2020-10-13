@@ -5,16 +5,16 @@
    left: 0;
    right: 0;
    top: 400px;
-   width: 962px;
-   height: 235px;
+   width: 963px;
+   height: 215px;
 }
 
 .button {
   position: absolute;
   width: 200px;
   height: 60px;
-  left: 370px;
-  top: 345px;
+  left: 380px;
+  top: 350px;
   font-family: 'Poiret One';
   font-size: 24px;
   text-align: center;

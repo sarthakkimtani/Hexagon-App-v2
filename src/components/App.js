@@ -1,7 +1,7 @@
 import React from "react";
 import ErrorBoundary from "./ErrorBoundary";
-import HomePage from "./HomePage";
-import AgreementPage from "./AgreementPage";
+// import HomePage from "./HomePage";
+// import AgreementPage from "./AgreementPage";
 import MainPage from "./MainPage";
 import { BrowserRouter } from 'react-router-dom';
 
@@ -14,7 +14,7 @@ class App extends React.Component {
         return(
             <ErrorBoundary>
             <BrowserRouter>
-              <div style={{ 'width': '100%', 'height': '100%' }}>
+              <div>
                 <MainPage />
               </div>
             </BrowserRouter>

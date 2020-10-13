@@ -1,7 +1,7 @@
-.container {
+div.container {
     -webkit-user-select: none;
     position: absolute;
-    width: 650px;
+    width: 700px;
     height: 400px; 
     left: 155px;
     top: 50px;
@@ -30,7 +30,7 @@
   width: 520px;
   height: 60px;
   left: 53px;
-  top: 155px;
+  top: 145px;
   font-family: 'Poiret One';
   color: #FFFFFF;
   font-style: normal;
@@ -45,7 +45,7 @@
   position: absolute;
   width: 240px;
   height: 240px;
-  left: 57%;
+  left: 62%;
   right: 4%;
   bottom: 41%;
 }
