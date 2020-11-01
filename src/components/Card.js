@@ -12,8 +12,8 @@ class Card extends React.Component {
     render() {
         return(
             <BrowserRouter>
-              <div className="container">
-                <h3 className="heading">Hexagon</h3>
+              <div className="container-card">
+                <h3 className="heading-card">Hexagon</h3>
 		        <h6 className="sub-heading">A Wallpaper App build for your Desktop</h6>
 		        <img src={logo} className="logo" alt="logo"></img>
               </div>

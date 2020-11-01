@@ -3,7 +3,6 @@ import { unsplash } from "../api/unsplash";
 import { toJson } from "unsplash-js";
 import axios from "axios";
 import Gallery from "./Gallery";
-import Chip from "./Chip";
 import Grid from "./Grid";
 import "./MainPage.css";
 import { ReactComponent as Download } from "../assets/svg/download.svg";
@@ -39,7 +38,7 @@ class MainPage extends React.Component {
 
 	renderImages() {
 		if(this.state.term === "") {
-			unsplash.collections.getCollectionPhotos(1199299,1,10,"popular")
+			unsplash.collections.getCollectionPhotos(3694365,1,10,"popular")
 			.then(toJson)
 			.then(json => {
 				 this.setState({ images: json });
@@ -88,18 +87,20 @@ class MainPage extends React.Component {
 			    <input type="text" placeholder="Search" id="search" autoComplete="true" onChange={e => {
 			    	this.setState({term: e.target.value})
 			    }} />
+			  </form>
+			  <form onSubmit={this.formSubmit}>
 			    <Gallery />
 			    <div id="sunny-chip" >
-			      <Chip name="Sunny" />
+			      <input type="submit" className="chip" value="Sunny" onClick={ e => { this.setState({ term: e.target.value }) } } />
 			    </div> 
 			    <div id="beach-chip">
-			  	  <Chip name="Beach" />
+			  	  <input type="submit" className="chip" value="Beach" onClick={ e => { this.setState({ term: e.target.value }) } } />
 			  	</div> 
 			  	<div id="travel-chip">
-			  	  <Chip name="Travel" />
+			  	  <input type="submit" className="chip" value="Travel" onClick={ e => { this.setState({ term: e.target.value }) } } />
 			  	</div> 
 			  	<div id="night-chip">
-			  	  <Chip name="Night" />
+			  	  <input type="submit" className="chip" value="Night" onClick={ e => { this.setState({ term: e.target.value }) } } />
 			  	</div>
 			  </form> 
 			  <Grid>

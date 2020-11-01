@@ -8,8 +8,8 @@ class Gallery extends React.Component {
 	}
 	render() {
 		return(
-			<div className="container">
-			  <h3 id="heading">Wallpapers</h3>
+			<div className="container-gallery">
+			  <h3 id="heading-gallery">Wallpapers</h3>
 			</div>
 			);
 	}

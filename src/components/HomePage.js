@@ -1,11 +1,11 @@
 import React from "react";
-import { BrowserRouter, Link, Route } from "react-router-dom";
+import { BrowserRouter, Link } from "react-router-dom";
 import Card from "./Card";
 import "./HomePage.css";
-import AgreementPage from "./AgreementPage";
 import { ReactComponent as Wave } from "../assets/svg/wave.svg";
 
 class HomePage extends React.Component {
+	// eslint-disable-next-line
     constructor(props) {
 		super(props);
 	}
@@ -13,7 +13,6 @@ class HomePage extends React.Component {
     render() {
         return(
 		<BrowserRouter>
-			<Route path="/agree" component={AgreementPage} />
         	<div id="main">
            	  <Card />
 		      <Wave className="wave" />

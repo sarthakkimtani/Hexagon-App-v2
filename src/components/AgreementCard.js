@@ -1,6 +1,6 @@
 import React from "react";
 import "./AgreementCard.css";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Link } from "react-router-dom";
 
 class AgreementCard extends React.Component {
 	// eslint-disable-next-line
@@ -18,8 +18,16 @@ class AgreementCard extends React.Component {
 						    DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE
 						    OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</b>
 						</p>
-						<button type="button" id="back-btn">Go Back</button>
-						<button type="button" id="agree-btn">I Agree</button>
+						<button type="button" id="back-btn">
+							<Link to="/" style={{ 'textDecoration': 'none', 'color': 'white' }}>
+		              		Go Back
+		          			</Link>
+						</button>
+						<button type="button" id="agree-btn">
+						   <Link to="/main" style={{ 'textDecoration': 'none', 'color': 'white' }}>
+		              		I Agree
+		          		   </Link>
+						</button>
 					</div>
 				</BrowserRouter>
 			);

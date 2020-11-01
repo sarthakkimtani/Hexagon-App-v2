@@ -1,4 +1,4 @@
-div.container {
+div.container-card {
     -webkit-user-select: none;
     position: absolute;
     width: 700px;
@@ -9,7 +9,7 @@ div.container {
     border-radius: 29px;
 }
 
-.heading {
+.heading-card {
     -webkit-user-select: none;
     position: absolute;
     width: 400px;
