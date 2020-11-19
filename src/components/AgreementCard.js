@@ -1,6 +1,6 @@
 import React from "react";
 import "./AgreementCard.css";
-import { BrowserRouter, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class AgreementCard extends React.Component {
 	// eslint-disable-next-line
@@ -9,7 +9,6 @@ class AgreementCard extends React.Component {
 	}
 	render() {
 		return(
-				<BrowserRouter>
 					<div className="container">
 						<p className="paragraph">
 							<b>The below notice and this permission notice shall be included in all copies or substantial portions of the Software.<br />
@@ -29,7 +28,6 @@ class AgreementCard extends React.Component {
 		          		   </Link>
 						</button>
 					</div>
-				</BrowserRouter>
 			);
 	}
 }

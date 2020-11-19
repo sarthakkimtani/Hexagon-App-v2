@@ -80,7 +80,6 @@ class MainPage extends React.Component {
 	}
 
 	render() {
-		const input = document.getElementById("search")
 		return(
 			<div>
 			  <form onSubmit={this.formSubmit}>

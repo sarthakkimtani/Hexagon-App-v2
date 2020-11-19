@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Card from "./Card";
 import "./HomePage.css";
 import { ReactComponent as Wave } from "../assets/svg/wave.svg";
@@ -12,7 +12,6 @@ class HomePage extends React.Component {
 
     render() {
         return(
-		<BrowserRouter>
         	<div id="main">
            	  <Card />
 		      <Wave className="wave" />
@@ -22,7 +21,6 @@ class HomePage extends React.Component {
 		          </Link>
                 </button>
             </div>
-		</BrowserRouter>
         );
 	}
 }
