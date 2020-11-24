@@ -1,25 +1,25 @@
 .container-gallery {
-	-webkit-user-select: none;
-	position: absolute;
-	width: 70%;
-	height: 1735px;
-	left: 0px;
-	top: 0px;
-	border-radius: 0px;
-	background: #121212;
+  -webkit-user-select: none;
+  position: absolute;
+  width: 70%;
+  height: 1735px;
+  left: 0px;
+  top: 0px;
+  border-radius: 0px;
+  background: #121212;
 }
 
 #heading-gallery {
-	position: absolute;
-	width: 260px;
-	height: 60px;
-	left: 0px;
-	top: 0px;
-	font-family: Poiret One;
-	font-style: normal;
-	font-weight: normal;
-	font-size: 36px;
-	line-height: 56px;
-	text-align: center;
-	color: #FFFFFF;
+  position: absolute;
+  width: 260px;
+  height: 60px;
+  left: 0px;
+  top: 0px;
+  font-family: Poiret One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 56px;
+  text-align: center;
+  color: #ffffff;
 }

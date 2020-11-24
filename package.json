@@ -4,14 +4,16 @@
   "private": true,
   "main": "public/electron.js",
   "author": "Sarthak Kimtani",
+  "description": "Wallpaper App for your desktop",
   "homepage": "./",
   "dependencies": {
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "axios": "^0.20.0",
+    "custom-electron-titlebar": "^3.2.5",
     "electron-is-dev": "^1.2.0",
-    "react": "^16.13.1",
+    "react": "^17.0.1",
     "react-awesome-lightbox": "^1.7.3",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.1.2",
@@ -20,14 +22,26 @@
   },
   "scripts": {
     "start": "concurrently \"cross-env BROWSER=none yarn react-scripts start\" \"wait-on http://localhost:3000 && electron .\"",
-    "build": "yarn react-build && yarn electron-build",
+    "build": "react-scripts build && electron-builder",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "electron-build": "electron-builder",
-    "release": "yarn react-build && electron-builder --publish=always"
+    "eject": "react-scripts eject"
   },
   "build": {
     "appId": "com.hexagon.electron",
+    "asar": true,
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ],
+      "publisherName": "Sarthak Kimtani",
+      "icon": "src/assets/logo/logo.ico"
+    },
     "files": [
       "build/**/*",
       "node_modules/**/*"
