@@ -3,7 +3,7 @@ import ErrorBoundary from "./ErrorBoundary";
 import HomePage from "./HomePage";
 import AgreementPage from "./AgreementPage";
 import MainPage from "./MainPage";
-import { BrowserRouter, Route, Switch, withRouter } from "react-router-dom";
+import { HashRouter, Route, Switch, withRouter } from "react-router-dom";
 
 class App extends React.Component {
   // eslint-disable-next-line
@@ -12,7 +12,7 @@ class App extends React.Component {
   }
   render() {
     return (
-      <BrowserRouter>
+      <HashRouter>
         <ErrorBoundary>
           <Switch>
             <Route path="/main" component={withRouter(MainPage)} />
@@ -20,7 +20,7 @@ class App extends React.Component {
             <Route exact path="/" component={withRouter(HomePage)} />
           </Switch>
         </ErrorBoundary>
-      </BrowserRouter>
+      </HashRouter>
     );
   }
 }

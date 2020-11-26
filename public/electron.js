@@ -19,6 +19,7 @@ function createWindow() {
     maxWidth: 980,
     maxHeight: 695,
     maximizable: false,
+    icon: "../src/assets/logo/logo.ico",
     title: "Hexagon - A Wallpaper App",
     webPreferences: {
       nodeIntegration: "true",

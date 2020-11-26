@@ -1,0 +1,22 @@
+directories:
+  output: dist
+  buildResources: src/assets
+files:
+  - filter:
+      - build/**/*
+      - build/**/*
+      - node_modules/**/*
+extraMetadata:
+  main: build/electron.js
+appId: com.hexagon.electron
+asar: true
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+        - ia32
+  publisherName: Sarthak Kimtani
+  icon: src/assets/logo/logo.ico
+extends: react-cra
+electronVersion: 11.0.1
