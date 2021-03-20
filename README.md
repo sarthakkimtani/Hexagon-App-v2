@@ -15,8 +15,8 @@ Hexagon, A wallpaper App build for your Desktop with Electron <br><br>
 # Download
 
 <uL>
-  <li>Windows 32-Bit <a href="https://github.com/sarthakkimtani/Hexagon-Electron-App-v2/releases">Click Here</a></li>
-  <li>Windows 64-Bit <a href="https://github.com/sarthakkimtani/Hexagon-Electron-App-v2/releases">Click Here</a></li>
+  <li>Windows 32-Bit <a href="https://github.com/sarthakkimtani/Hexagon-App-v2/releases/tag/v2">Click Here</a></li>
+  <li>Windows 64-Bit <a href="https://github.com/sarthakkimtani/Hexagon-App-v2/releases/tag/v2">Click Here</a></li>
 </ul>
 
 # Dependencies
